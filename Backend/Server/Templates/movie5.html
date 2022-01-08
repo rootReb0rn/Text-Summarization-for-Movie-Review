@@ -52,20 +52,21 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card bg-black text-white mx-4 img__wrap" style="width: 30vh;">
-                                    <img src="img/movie2.jpg" class="card-img" alt="..." style="height: 100%;">
+                                    <img src="{{ url_for('static' , filename='img/movie5.jpg') }}" class="card-img" alt="..." style="height: 100%;">
                                 </div>
                             </div>
                             <div class="col-md-9 text-start">
-                                <h1 class="display-5 fw-bold text-white mb-3">A Quiet Place</h1>
-                                <p class="text-white mb-3">A family struggles for survival in a world where most humans
-                                    have been killed by blind but noise-sensitive creatures. They are forced to
-                                    communicate in sign language to keep the creatures at bay.</p>
-                                <form>
+                                <h1 class="display-5 fw-bold text-white mb-3">Interstellar</h1>
+                                <p class="text-white mb-3">When Earth becomes uninhabitable in the future, a farmer and
+                                    ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of
+                                    researchers, to find a new planet for humans.</p>
+                                <form method="post" action="/movie5">
+                                    <input type="hidden" name="movie-name" value="5">
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1"
                                             class="form-label fw-bold text-white">Your Reviews</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1"
-                                            rows="3"></textarea>
+                                            rows="3" name="my-review"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-warning">Submit Review</button>
                                 </form>

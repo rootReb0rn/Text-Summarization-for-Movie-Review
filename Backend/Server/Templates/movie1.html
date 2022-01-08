@@ -52,20 +52,28 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="card bg-black text-white mx-4 img__wrap" style="width: 30vh;">
-                                    <img src="img/movie2.jpg" class="card-img" alt="..." style="height: 100%;">
+                                    <img src="{{ url_for('static' , filename='img/spider_man.jpg') }}" class="card-img" alt="..." style="height: 100%;">
                                 </div>
                             </div>
                             <div class="col-md-9 text-start">
-                                <h1 class="display-5 fw-bold text-white mb-3">A Quiet Place</h1>
-                                <p class="text-white mb-3">A family struggles for survival in a world where most humans
-                                    have been killed by blind but noise-sensitive creatures. They are forced to
-                                    communicate in sign language to keep the creatures at bay.</p>
-                                <form>
+                                <h1 class="display-5 fw-bold text-white mb-3">Spider-Man: No Way Home</h1>
+                                <p class="text-white mb-3">With Spider-Man's identity now revealed, our friendly
+                                    neighborhood
+                                    web-slinger is unmasked and no longer able to separate his normal life as Peter
+                                    Parker
+                                    from the high stakes of being a superhero. When Peter asks for help from Doctor
+                                    Strange,
+                                    the stakes become even more dangerous, forcing him to discover what it truly means
+                                    to be
+                                    Spider-Man.</p>
+                                <!-- <p class="text-white mb-2"><b>Release date:</b> December 17, 2021 (USA)</p>
+                                <p class="text-white"><b>Director:</b> Jon Watts</p> -->
+                                <form method="post" action="/movie1">
+                                    <input type="hidden" name="movie-name" value="1">
                                     <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1"
-                                            class="form-label fw-bold text-white">Your Reviews</label>
+                                        <label for="exampleFormControlTextarea1" class="form-label fw-bold text-white">Your Reviews</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1"
-                                            rows="3"></textarea>
+                                            rows="3" name="my-review"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-warning">Submit Review</button>
                                 </form>
@@ -73,8 +81,8 @@
                         </div>
                     </div>
                 </div>
+
             </div>
-            <!-- Movie Card -->
             <div class=" mb-2 rounded-3 bg-black" style="min-height: 50vh;">
                 <div class="container-fluid py-5">
                     <h1 class="display-3 text-white pb-4">Reviews</h1>
@@ -107,40 +115,13 @@
                 </div>
             </div>
 
-            <!-- <div class="row align-items-md-stretch">
-            <div class="col-md-6">
-              <div class="h-100 p-5 text-white bg-dark rounded-3">
-                <h2>Change the background</h2>
-                <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-                <button class="btn btn-outline-light" type="button">Example button</button>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="h-100 p-5 bg-light border rounded-3">
-                <h2>Add borders</h2>
-                <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-                <button class="btn btn-outline-secondary" type="button">Example button</button>
-              </div>
-            </div>
-          </div> -->
-
-            <!-- <footer class="pt-3 mt-4 text-muted border-top">
-            &copy; 2021
-          </footer> -->
         </div>
     </main>
-    <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 </body>
 
 </html>
