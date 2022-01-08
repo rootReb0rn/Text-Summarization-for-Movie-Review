@@ -95,5 +95,5 @@ def movie5():
         InsertReview(movie=movie,review=get_summary_review)
         print(movie)
         print(review)
-        display_review = DisplayReview(movie="5")
+    display_review = DisplayReview(movie="5")
     return render_template("movie5.html",display_review=display_review)
