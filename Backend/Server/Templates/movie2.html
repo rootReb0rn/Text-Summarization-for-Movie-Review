@@ -81,27 +81,14 @@
                     <h1 class="display-3 text-white pb-4">Reviews</h1>
                     <table class="table table-black table-borderless text-white">
                         <tbody>
+                            {% for get_review in display_review %}
+
                             <tr style="height: 14vh;">
-                                <th scope="row">1</th>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, expedita.
-                                    Deleniti explicabo nulla eius rem molestiae. Autem eligendi architecto officiis,
-                                    delectus ipsa dolorem corporis animi mollitia, aspernatur vel similique iste.</td>
+                                <th scope="row">{{loop.index}}</th>
+                                <td>{{get_review.review}}</td>
 
                             </tr>
-                            <tr style="height: 14vh;">
-                                <th scope="row">2</th>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, libero eum! Quidem
-                                    laboriosam dolorum aut facere similique eveniet, earum reiciendis iusto in laborum
-                                    distinctio provident perferendis dolores molestias adipisci ad!</td>
-
-                            </tr>
-                            <tr style="height: 14vh;">
-                                <th scope="row">3</th>
-                                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quidem,
-                                    repellendus optio veritatis error, quam ipsam, illum necessitatibus placeat ab
-                                    adipisci eveniet! Sint exercitationem animi aut nisi voluptate, eos accusantium.
-                                </td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
 

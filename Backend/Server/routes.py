@@ -30,6 +30,8 @@ def Summarization(review):
         print("Text PreProcessing\t: Completed")
         return get_summary
 
+def DisplayReview(movie):
+    return Review.query.filter_by(movie=movie).all()
 
 @app.route('/')
 def main():
@@ -44,7 +46,8 @@ def movie1():
         InsertReview(movie=movie,review=get_summary_review)
         print(movie)
         print(review)
-    return render_template("movie1.html")
+    display_review = DisplayReview(movie=movie)
+    return render_template("movie1.html",display_review=display_review)
 
 @app.route('/movie2', methods=['POST', 'GET'])
 def movie2():
@@ -55,7 +58,9 @@ def movie2():
         InsertReview(movie=movie,review=get_summary_review)
         print(movie)
         print(review)
-    return render_template("movie2.html")
+    display_review = DisplayReview(movie=movie)
+
+    return render_template("movie2.html",display_review=display_review)
 
 @app.route('/movie3', methods=['POST', 'GET'])
 def movie3():
@@ -66,7 +71,8 @@ def movie3():
         InsertReview(movie=movie,review=get_summary_review)
         print(movie)
         print(review)
-    return render_template("movie3.html")
+    display_review = DisplayReview(movie=movie)
+    return render_template("movie3.html",display_review=display_review)
 
 @app.route('/movie4', methods=['POST', 'GET'])
 def movie4():
@@ -77,7 +83,8 @@ def movie4():
         InsertReview(movie=movie,review=get_summary_review)
         print(movie)
         print(review)
-    return render_template("movie4.html")
+    display_review = DisplayReview(movie=movie)
+    return render_template("movie4.html",display_review=display_review)
 
 @app.route('/movie5', methods=['POST', 'GET'])
 def movie5():
@@ -88,4 +95,5 @@ def movie5():
         InsertReview(movie=movie,review=get_summary_review)
         print(movie)
         print(review)
-    return render_template("movie5.html")
+        display_review = DisplayReview(movie=movie)
+    return render_template("movie5.html",display_review=display_review)
