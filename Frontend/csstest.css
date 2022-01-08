@@ -1,0 +1,63 @@
+.img__wrap {
+  position: relative;
+}
+
+.movie-card{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.movie-title{
+  position: absolute;
+  bottom: 8px;
+  left: 0px;
+  font-size: 24px;
+}
+
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0,0,0);
+  background: linear-gradient(14deg, rgba(0,0,0,1) 21%, rgba(0,0,0,0) 100%);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+}
+
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+}
+
+.bg-custom{
+  background: rgb(0,0,0);
+  background: linear-gradient(10deg, rgba(0,0,0,1) 62%, rgba(77,25,77,1) 100%); 
+  background-repeat: no-repeat;
+}
+
+.custom-font {
+  background: -webkit-linear-gradient(to right, #fdeff9, #7303c0, #ec38bc, #fdeff9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fdeff9, #7303c0, #ec38bc, #fdeff9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: -webkit-linear-gradient(#f3ec78, #af4261); */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
